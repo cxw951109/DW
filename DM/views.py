@@ -25,7 +25,7 @@ def index(request):
                         for n3 in range(n2 + 1, l):
                             for n4 in range(n3 + 1, l):
                                 for n5 in range(n4 + 1, l):
-                                    n =" ".join(str(i) for i in [input_list[n0], input_list[n1], input_list[n2], input_list[n3], input_list[n4],
+                                    n ="    ".join(str(i) for i in [input_list[n0], input_list[n1], input_list[n2], input_list[n3], input_list[n4],
                                           input_list[n5]])
                                     data.append(n)
         n =len(data)

@@ -1,26 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="height: 100%;margin: 0">
 <head>
     <meta charset="UTF-8">
     <title></title>
 </head>
-<body>
-<div style="text-align: center">
-    <form action="" method="post">
+<body style="height: 96%">
+<div style="text-align: center;height: 100%">
+    <form action="" method="post" style="height: 100%">
         {%csrf_token%}
-        <p>
-            <label style="width: 210px">请输入6至10个整数并以空格间隔： </label>
+        <p style="height: 10%;margin: 0">
+            <label style="font-size: 40px">请输入6至10个整数并以空格间隔： </label>
         </p>
-        <p>
-            <div style="display: flex;align-items: center;justify-content: center">
-                <input style="width: 165px;height:23px;margin-right: 10px " type="text" name="Nums" autocomplete="off" value="{{ nums }}">
-                <input style="width: 55px;height: 28px" type="submit" value="提交">
-
-            </div>
+        <p style="height: 10%;display: flex;align-items: center;justify-content: center;margin: 0">
+                <input style="height:40px!important;font-size:28px;width: 450px;margin-right: 20px " type="text" name="Nums" autocomplete="off" value="{{ nums }}">
+                <input style="height:40px!important;width: 100px" type="submit" value="提交">
         </p>
-        <p><text style="color: red">{{ error }}</text></p>
-        <p>
-            <textarea style="border:0;border-radius:5px;background-color:rgba(241,241,241,.98);width: 700px;height: 400px;resize: none;text-align: center" name="yj" >
+        <p style="height: 5%;margin: 0"><text style="color: red;font-size: 20px">{{ error }}</text></p>
+        <p style="height: 75%;margin: 0">
+            <textarea style="font-size:35px;border:0;border-radius:5px;background-color:rgba(241,241,241,.98);width: 96%;height: 100%;resize: none;text-align: center" name="yj" >
 {% if  data != None %}
 {% for i in data %}
 {{ i }}
