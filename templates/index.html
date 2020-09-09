@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div style="text-align: center">
+    <form action="" method="post">
+        {%csrf_token%}
+        <p>
+            <label style="width: 210px">请输入6至10个整数并以空格间隔： </label>
+        </p>
+        <p>
+            <div style="display: flex;align-items: center;justify-content: center">
+                <input style="width: 165px;height:23px;margin-right: 10px " type="text" name="Nums" autocomplete="off" value="{{ nums }}">
+                <input style="width: 55px;height: 28px" type="submit" value="提交">
+
+            </div>
+        </p>
+        <p><text style="color: red">{{ error }}</text></p>
+        <p>
+            <textarea style="border:0;border-radius:5px;background-color:rgba(241,241,241,.98);width: 700px;height: 400px;resize: none;text-align: center" name="yj" >
+{% if  data != None %}
+{% for i in data %}
+{{ i }}
+{% endfor %}
+合计：{{ num }}{% endif %}
+            </textarea>
+        </p>
+    </form>
+</div>
+
+</body>
+
+</html>
